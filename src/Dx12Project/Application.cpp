@@ -201,7 +201,7 @@ namespace tpot
             コンパイルフラグ |= D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
 #endif
             HRESULT result;
-            result = D3DCompileFromFile(L"shaers.hlsl", nullptr, nullptr, "VSMain", "vs_5_0", 
+            result = D3DCompileFromFile(L"shaders.hlsl", nullptr, nullptr, "VSMain", "vs_5_0", 
                 コンパイルフラグ, 0, 頂点シェーダ.put(), エラー.put()); if (result) ShowError(result, エラー.get());
             result = D3DCompileFromFile(L"shaders.hlsl", nullptr, nullptr, "PSMain", "ps_5_0",
                 コンパイルフラグ, 0, ピクセルシェーダ.put(), エラー.put()); if (result) ShowError(result, エラー.get());
